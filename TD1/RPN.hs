@@ -16,14 +16,15 @@ parseOp instruction =
         "dup"   ->  \(x : s)  ->  x : x : s
         "swap"  ->  \(x : y : s)  ->  y : x : s
         "drop"  ->  \(x : s)  ->  s
-        "pick"  ->  \(n : s)  ->  (pick n (n : s)) : s
+        "pick"  ->  \(n : s)  ->  ((n : s) !! n) : s
         "depth" ->  \s  ->  (length s) : s
-        "quit" -> error "quitting"
+        "quit"  -> error "quitting"
+        "flush" -> \ _ -> []
         int     ->  \s -> (read int :: Int) : s
 
-pick :: Int -> [a] -> a
-pick 0 (x : _) = x
-pick n (_ : s) = pick (n-1) s
+pick :: Int -> [a] -> a
+pick 0 (x : _) = x
+pick n (_ : s) = pick (n-1) s
 
 eval :: a -> [a -> a] -> a
 eval x [] = x
