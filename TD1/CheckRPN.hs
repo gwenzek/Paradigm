@@ -28,11 +28,11 @@ prop_div s = length s >= 2 && fromIntegral (s !! 0) /= 0 ==>
 
 main = do
         quickCheck prop_dup
-        --quickCheck prop_drop
-        --quickCheck prop_swap
-        --quickCheck prop_depth
-        --quickCheck prop_pick
-        --quickCheck prop_add
-        --quickCheck prop_sub
-        --quickCheck prop_mul
-        --quickCheck prop_div
+        quickCheck prop_drop
+        quickCheck prop_swap
+        quickCheck prop_depth
+        quickCheck prop_pick
+        quickCheck prop_add
+        quickCheck prop_sub
+        quickCheck prop_mul
+        quickCheck prop_div
