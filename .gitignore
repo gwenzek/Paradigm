@@ -1,1 +1,5 @@
 *.sublime-workspace
+PetulantMusic/*
+*.idea/*
+Scala-TD1/project/*
+Scala-TD1/target/*
