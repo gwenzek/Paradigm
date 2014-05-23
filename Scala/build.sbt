@@ -1,4 +1,3 @@
-name := "Scala-TD1"
+scalaVersion := "2.11.0"
 
-version := "1.0"
-    
+libraryDependencies += "org.scalatest" %% "scalatest" % "2.1.6"
