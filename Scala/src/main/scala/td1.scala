@@ -1,6 +1,7 @@
 package fr.enst.plnc2014.td1
 
 import scala.annotation.tailrec
+import scala.language.implicitConversions
 
 object TD1 {
 
